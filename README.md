@@ -1,3 +1,3 @@
 # html_course
 
-Link [https://youtu.be/mJgBOIoGihA?si=o4qYlpxNUIVeCSbk&t=10240]
+Link [https://youtu.be/mJgBOIoGihA?si=2fQ0fG5H-wrqJ_a5]

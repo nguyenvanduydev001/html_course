@@ -174,14 +174,102 @@
       <p>I'd really like to hear from you!</p>
 
       <form action="https://httpbin.org/get" method="get">
-        <p>
-          <label for="firstName">First Name:</label>
-          <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
-        </p>
-        <p>
-          <label for="lastName">Last Name:</label>
-          <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required>
-        </p>
+        <fieldset>
+          <legend>Personal Info</legend>
+          <p>
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Jane" autocomplete="on" required autofocus>
+          </p>
+          <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Doe" autocomplete="on" required>
+          </p>
+          <p>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="your secret" required>
+          </p>
+          <p>
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+              required>
+          </p>
+          <p>
+            <label for="decade">Favorite Decade:</label>
+            <input type="number" name="decade" id="decade" min="1950" max="2030" step="10" value="2026">
+          </p>
+          <p>
+            <label for="coffee">Favorite Coffee:</label>
+            <select name="coffee" id="coffee" multiple size="5">
+              <optgroup label="Hot Coffee">
+                <option value="espresso">Espresso</option>
+                <option value="americano" selected>Americano</option>
+              </optgroup>
+              <optgroup label="Cold Coffee">
+                <option value="iced">Iced Coffee</option>
+                <option value="frappuccino">Frappuccino</option>
+              </optgroup>
+              <option value="other">Other</option>
+            </select>
+          </p>
+          <!-- <p>
+            <label for="coffee">Favorite Coffee:</label>
+            <input type="text" name="coffee" id="coffee" list="coffeeList">
+            <datalist id="coffeeList">
+              <option value="Espresso">
+                <option value="Americano">
+                  <option value="Iced Coffee">
+                    <option value="Frappuccino">
+                      <option value="Other">
+                      </datalist>
+                    </p> -->
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>What is your favorite food?</legend>
+          <p>
+            <input type="radio" name="food" id="tacos" value="tacos">
+            <label for="tacos">Tacos</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="pizza" value="pizza">
+            <label for="pizza">Pizza</label>
+          </p>
+          <p>
+            <input type="radio" name="food" id="other" value="other">
+            <label for="other">Other</label>
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Do you have pets?</legend>
+          <p>
+            <input type="checkbox" name="pets" id="dog" value="dog">
+            <label for="dog">Dog</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="cat" value="cat">
+            <label for="cat">Cat</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="fish" value="fish">
+            <label for="fish">Fish</label>
+          </p>
+          <p>
+            <input type="checkbox" name="pets" id="otherPet" value="otherPet">
+            <label for="otherPet">Other</label>
+          </p>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Send Me A Note</legend>
+          <label for="message">Your Message:</label>
+          <br>
+          <textarea name="message" id="message" rows="5" cols="50" placeholder="Type your message here..." required></textarea>
+        </fieldset>
+        <br>
+        <button type="submit">Submit</button>
+        <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+        <button type="reset">Reset</button>
       </form>
     </article>
   </main>
